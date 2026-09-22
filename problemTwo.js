@@ -18,6 +18,20 @@ const countVowels = (str) =>{
     }
     return count
 }
+
+const countVowels2 = (str) =>{
+    let count = 0
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    const lowerCase = str.toLowerCase()
+
+    for(let i=0; i<lowerCase.length; i++){
+        if(vowels.includes(lowerCase[i])){
+            count++
+        }
+    }
+    return count
+}
+// console.log(countVowels2('Mango'))
 // console.log(countVowels('JavaScript'))
 
 // Problem 8: Check Palindrome  [Easy]
@@ -25,3 +39,30 @@ const countVowels = (str) =>{
 // Example:
 // Input: 'racecar'  → Output: trueInput: 'hello'    → Output: false
 // Hint: Compare the string to its reverse.
+const isPalindrome = (str) =>{
+    const reverse = str.split('').reverse().join('')
+    if(str === reverse){
+        return true
+    }
+    else{
+        return false
+    }
+    
+}
+// console.log(isPalindrome('reverse'))
+
+// Problem 9: Capitalize First Letter of Each Word [Easy] Description: Write a function titleCase(str) that capitalizes the first letter of every word in a string. Example: Input: 'hello world' → Output: 'Hello World' Hint: Use split(' '), map(), and join(' ').
+const titleCase =(str) =>{
+    const words = str.split(' ')
+    const capitalizes = words.map(word => {
+        return word[0].toUpperCase() + word.slice(1)
+    })
+    return capitalizes.join(' ')
+}
+// console.log(titleCase('hello harun'))
+
+// Problem 10: Count Occurrences of a Character [Easy] Description: Write a function countChar(str, char) that returns how many times a character appears in a string. Example: Input: 'banana', 'a' → Output: 3 Hint: Use split(char).length - 1 or a loop.
+const countChar = (str, char) =>{
+    return str.split(char).length - 1
+}
+console.log(countChar('banana', 'n'))
