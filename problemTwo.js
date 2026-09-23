@@ -65,4 +65,15 @@ const titleCase =(str) =>{
 const countChar = (str, char) =>{
     return str.split(char).length - 1
 }
-console.log(countChar('banana', 'n'))
+
+const countChar2 = (str, char) =>{
+    let count = 0
+    for(let letter of str){
+        if(letter === char){
+            count++
+        }
+    }
+    return count
+}
+// console.log(countChar2('occurrences', 'u'))
+// console.log(countChar('banana', 'n'))
