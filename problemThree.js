@@ -49,3 +49,16 @@ const flattenArray =(arr) =>{
     return arr.flat(1)
 }
 // console.log(flattenArray([1, [2, 3], [4, 5]]))
+
+// Problem 15: Chunk an Array [Medium] Description: Write a function chunkArray(arr, size) that splits an array into chunks of a given size. Example: Input: [1,2,3,4,5], 2 → Output: [[1,2],[3,4],[5]]
+const chunkArray = (arr, size) =>{
+    const result = []
+
+    for(let i=0; i < arr.length; i=i+size){
+        const chunk = arr.slice(i, i+ size)
+
+        result.push(chunk)
+    }
+    return result
+}
+console.log(chunkArray([1, 2, 3, 4, 5], 2))
