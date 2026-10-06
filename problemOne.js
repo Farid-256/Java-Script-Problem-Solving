@@ -3,20 +3,20 @@
 // Example:
 // Input: a = 5, b = 10. Output: a = 10, b = 5
 // Hint: Try using destructuring or arithmetic operators.
-const swaps = (a, b) =>{
+const swaps = (a, b) => {
     [a, b] = [b, a]
-    return {a,b}
+    return { a, b }
 }
 // console.log(swaps(5, 10))
 
 // Alternet problem 1: Swap Without Destructuring [Easy]
 // Description:
 // দুইটা variable a এবং b এর মান এমনভাবে swap করো যাতে কোনো third variable ব্যবহার না হয়, আর array destructuringও না হয়। শুধু arithmetic operators (+, -) ব্যবহার করবে।
-const swaps2 = (a, b) =>{
+const swaps2 = (a, b) => {
     a = a + b //15
     b = a - b
     a = a - b
-   return {a, b}
+    return { a, b }
 }
 // console.log(swaps2(10, 5))
 
@@ -25,10 +25,10 @@ const swaps2 = (a, b) =>{
 // Example:
 // Input: 4  → Output: true. Input: 7  → Output: false
 // Hint: Use the modulus (%) operator.
-const isEven = (n) =>{
-    if(n % 2 === 0){
+const isEven = (n) => {
+    if (n % 2 === 0) {
         return 'Even'
-    }else{
+    } else {
         return 'Odd'
     }
 }
@@ -37,14 +37,14 @@ const isEven = (n) =>{
 // Alternate Problem 2: Check Even or Odd [Easy]
 // Description:
 // এমন একটা function লেখো যেটা একটা সংখ্যা নেবে এবং বলবে সেটা জোড় (even) নাকি বিজোড় (odd)।
-const isEven2 = (n) =>{
-    if(n % 2 === 0){
+const isEven2 = (n) => {
+    if (n % 2 === 0) {
         return (true)
-    }else{
+    } else {
         return (false)
     }
 }
-console.log(isEven2(10))
+// console.log(isEven2(10))
 
 
 // Problem 3: Find the Largest of Three Numbers  [Easy]
@@ -53,27 +53,75 @@ console.log(isEven2(10))
 // Input: 3, 7, 5  → Output: 7
 // Hint: Use Math.max() or if-else conditions.
 
-const largest = (a, b, c) =>{
-    if(a > b && a > c){
+const largest = (a, b, c) => {
+    if (a >= b && a >= c) {
         return a
     }
-    else if(b > a && b > c){
+    else if (a <= b && b >= c) {
         return b
     }
-    else{
+    else {
         return c
     }
 }
 // console.log(largest(3, 7, 5))
 
- 
+// Alternate problem: Find the Second Largest [Easy-Medium]
+// Description:
+// এমন একটা function লেখো secondLargest(a, b, c) — যেটা তিনটা সংখ্যার মধ্যে দ্বিতীয় বৃহত্তম (second largest) সংখ্যাটা return করবে।
+//Right way
+const secondLargest = (a, b, c) =>{
+    const arr = [a, b, c]
+    const result = arr.sort((x, y) => x - y)
+    return result[1]
+
+}
+// console.log(secondLargest(30, 20, 10))
+// const secondLargest = (a, b, c) => {
+
+//     let arr1 = [a, b, c]
+//     const arr2 = []
+
+//     if (a >= b && a >= c) {
+//         arr2.push(a)
+//     }
+//     else if (b >= a && b >= c) {
+//         arr2.push(b)
+//     }
+//     else {
+//         arr2.push(c)
+//     }
+
+//     if (a <= b && a <= c) {
+//         arr2.push(a)
+//     }
+//     else if (b <= a && b <= c) {
+//         arr2.push(b)
+//     }
+//     else {
+//         arr2.push(c)
+//     }
+
+//     const combind = [...arr1, ...arr2]
+
+//     const uncommon = combind.filter(item => {
+//         return !arr1.includes(item) || !arr2.includes(item)
+//     })
+//     return uncommon
+
+
+// }
+// console.log(secondLargest(30, 10, 10))
+
+
+
 // Problem 4: Celsius to Fahrenheit  [Easy]
 // Description: Write a function toFahrenheit(celsius) that converts a Celsius temperature to Fahrenheit.
 // Example:
 // Input: 0   → Output: 32 Input: 100 → Output: 212
 // Hint: Formula: (C × 9/5) + 32
-const toFahrenheit = (celsius) =>{
-    return (celsius * 9/5) + 32
+const toFahrenheit = (celsius) => {
+    return (celsius * 9 / 5) + 32
 }
 // console.log(toFahrenheit(100))
 
@@ -82,14 +130,14 @@ const toFahrenheit = (celsius) =>{
 // Example:
 // Input: -5  → Output: 'negative'Input: 0   → Output: 'zero'
 // Hint: Use if-else if-else statements.
-const checkSign = (n) =>{
-    if(n === 0){
+const checkSign = (n) => {
+    if (n === 0) {
         return 'Zero'
     }
-    else if(n > 0){
+    else if (n > 0) {
         return 'Positive'
     }
-    else{
+    else {
         return 'Negative'
     }
 }
