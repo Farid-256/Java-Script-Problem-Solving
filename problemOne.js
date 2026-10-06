@@ -3,12 +3,22 @@
 // Example:
 // Input: a = 5, b = 10. Output: a = 10, b = 5
 // Hint: Try using destructuring or arithmetic operators.
-
-const swap = (a, b) => {
+const swaps = (a, b) =>{
     [a, b] = [b, a]
-    return { a, b }
+    return {a,b}
 }
-// console.log(swap(5, 10))
+// console.log(swaps(5, 10))
+
+// Alternet problem: Swap Without Destructuring [Easy]
+// Description:
+// দুইটা variable a এবং b এর মান এমনভাবে swap করো যাতে কোনো third variable ব্যবহার না হয়, আর array destructuringও না হয়। শুধু arithmetic operators (+, -) ব্যবহার করবে।
+const swaps2 = (a, b) =>{
+    a = a + b //15
+    b = a - b
+    a = a - b
+   return {a, b}
+}
+// console.log(swaps2(10, 5))
 
 // Problem 2: Check Even or Odd  [Easy]
 // Description: Write a function isEven(n) that returns true if a number is even, and false if it is odd.
