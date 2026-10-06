@@ -9,7 +9,7 @@ const swaps = (a, b) =>{
 }
 // console.log(swaps(5, 10))
 
-// Alternet problem: Swap Without Destructuring [Easy]
+// Alternet problem 1: Swap Without Destructuring [Easy]
 // Description:
 // দুইটা variable a এবং b এর মান এমনভাবে swap করো যাতে কোনো third variable ব্যবহার না হয়, আর array destructuringও না হয়। শুধু arithmetic operators (+, -) ব্যবহার করবে।
 const swaps2 = (a, b) =>{
@@ -25,16 +25,27 @@ const swaps2 = (a, b) =>{
 // Example:
 // Input: 4  → Output: true. Input: 7  → Output: false
 // Hint: Use the modulus (%) operator.
-
 const isEven = (n) =>{
     if(n % 2 === 0){
-        return true
-    }
-    else{
-        return false
+        return 'Even'
+    }else{
+        return 'Odd'
     }
 }
-// console.log(isEven(5))
+// console.log(isEven(10))
+
+// Alternate Problem 2: Check Even or Odd [Easy]
+// Description:
+// এমন একটা function লেখো যেটা একটা সংখ্যা নেবে এবং বলবে সেটা জোড় (even) নাকি বিজোড় (odd)।
+const isEven2 = (n) =>{
+    if(n % 2 === 0){
+        return (true)
+    }else{
+        return (false)
+    }
+}
+console.log(isEven2(10))
+
 
 // Problem 3: Find the Largest of Three Numbers  [Easy]
 // Description: Write a function largest(a, b, c) that returns the largest of three numbers.
@@ -82,4 +93,4 @@ const checkSign = (n) =>{
         return 'Negative'
     }
 }
-console.log(checkSign(-5))
+// console.log(checkSign(-5))
