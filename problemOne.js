@@ -77,11 +77,11 @@ const secondLargest = (a, b, c) =>{
 
 }
 // console.log(secondLargest(30, 20, 10))
-// const secondLargest = (a, b, c) => {
 
+
+// const secondLargest = (a, b, c) => {
 //     let arr1 = [a, b, c]
 //     const arr2 = []
-
 //     if (a >= b && a >= c) {
 //         arr2.push(a)
 //     }
@@ -91,7 +91,6 @@ const secondLargest = (a, b, c) =>{
 //     else {
 //         arr2.push(c)
 //     }
-
 //     if (a <= b && a <= c) {
 //         arr2.push(a)
 //     }
@@ -101,15 +100,11 @@ const secondLargest = (a, b, c) =>{
 //     else {
 //         arr2.push(c)
 //     }
-
 //     const combind = [...arr1, ...arr2]
-
 //     const uncommon = combind.filter(item => {
 //         return !arr1.includes(item) || !arr2.includes(item)
 //     })
 //     return uncommon
-
-
 // }
 // console.log(secondLargest(30, 10, 10))
 
@@ -130,15 +125,36 @@ const toFahrenheit = (celsius) => {
 // Example:
 // Input: -5  → Output: 'negative'Input: 0   → Output: 'zero'
 // Hint: Use if-else if-else statements.
-const checkSign = (n) => {
-    if (n === 0) {
+const checkSign = (n) =>{
+    if(n === 0){
         return 'Zero'
     }
-    else if (n > 0) {
+    else if(n > 0){
         return 'Positive'
     }
-    else {
+    else{
         return 'Negative'
     }
 }
-// console.log(checkSign(-5))
+// console.log(checkSign(5))
+
+// Alternate problem 5: Description:
+// একটা function লেখো checkTemperature(temp) — যেটা তাপমাত্রা (temperature) নিয়ে একটা category return করবে।
+const checkTemperature = (temp) =>{
+    if(temp < 0){
+        return 'freezing'
+    }
+    else if(temp <= 10){
+        return 'cold'
+    }
+    else if(temp <=25){
+        return 'normal'
+    }
+    else if(temp <= 35){
+        return 'hot'
+    }
+    else if(temp > 35){
+        return 'very hot'
+    }
+}
+console.log(checkTemperature(20))
