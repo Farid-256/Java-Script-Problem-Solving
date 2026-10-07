@@ -2,7 +2,15 @@
 const reverseString = (str) =>{
     return str.split('').reverse().join('')
 }
-// console.log(reverseString('Hellow'))
+// console.log(reverseString('DeepSeek'))
+
+//  Problem 6 (Alternate): Reverse Words in a Sentence [Easy]
+// Description:
+// একটা function লেখো reverseWords(sentence) — যেটা একটা বাক্যের শব্দগুলোর ক্রম উল্টে দেবে
+const reverseWords = (sentence) =>{
+    return sentence.split(' ').reverse().join(' ')
+}
+// console.log(reverseWords('I Love You Arpa'))
 
  
 // Problem 7: Count Vowels in a String [Easy] Description: Write a function countVowels(str) that counts and returns the number of vowels (a, e, i, o, u) in a string. Example: Input: 'hello' → Output: 2Input: 'javascript' → Output: 3 Hint: Use a loop or match() with a regular expression.

@@ -157,4 +157,4 @@ const checkTemperature = (temp) =>{
         return 'very hot'
     }
 }
-console.log(checkTemperature(20))
+// console.log(checkTemperature(20))
