@@ -79,14 +79,18 @@ const isPalindrome = (str) =>{
 }
 // console.log(isPalindrome('racecar'))
 
-//Alternate problem-8: বিবরণ: এমন একটি ফাংশন লিখুন reverseSentence(sentence) — যেটি একটি বাক্যের (sentence) প্রতিটি শব্দকে উল্টিয়ে দেবে, কিন্তু বাক্যের শব্দগুলোর ক্রম বা সিরিয়াল ঠিক থাকবে।উদাহরণ:ইনপুট: 'Hello World' $\rightarrow$ আউটপুট: 'olleH dlroW'ইনপুট: 'JavaScript is fun' $\rightarrow$ আউটপুট: 'tpircSavaJ si nuf'
+//Alternate problem-8: বিবরণ: এমন একটি ফাংশন লিখুন reverseSentence(sentence) — যেটি একটি বাক্যের
+// (sentence) প্রতিটি শব্দকে উল্টিয়ে দেবে, কিন্তু বাক্যের শব্দগুলোর ক্রম বা সিরিয়াল ঠিক থাকবে।
+// উদাহরণ:ইনপুট: 'Hello World' $\rightarrow$ আউটপুট: 'olleH dlroW'ইনপুট: 'JavaScript is fun' $\rightarrow$ আউটপুট: 'tpircSavaJ si nuf'
 const reverseSentence = (sentence) =>{
     const reverse = sentence.split(' ').reverse().join(' ')
     return reverse
 }
-console.log(reverseSentence('I Love Bangladesh'))
+// console.log(reverseSentence('I Love Bangladesh'))
 
-// Problem 9: Capitalize First Letter of Each Word [Easy] Description: Write a function titleCase(str) that capitalizes the first letter of every word in a string. Example: Input: 'hello world' → Output: 'Hello World' Hint: Use split(' '), map(), and join(' ').
+// Problem 9: Capitalize First Letter of Each Word [Easy] Description: Write a function titleCase(str) 
+// that capitalizes the first letter of every word in a string. 
+// Example: Input: 'hello world' → Output: 'Hello World' Hint: Use split(' '), map(), and join(' ').
 const titleCase = (str) => {
     const words = str.split(' ')
     const capitalizes = words.map(word => {
@@ -96,19 +100,22 @@ const titleCase = (str) => {
 }
 // console.log(titleCase('hello harun'))
 
-// Problem 10: Count Occurrences of a Character [Easy] Description: Write a function countChar(str, char) that returns how many times a character appears in a string. Example: Input: 'banana', 'a' → Output: 3 Hint: Use split(char).length - 1 or a loop.
-const countChar = (str, char) => {
-    return str.split(char).length - 1
-}
-
-const countChar2 = (str, char) => {
+// Problem 10: Count Occurrences of a Character [Easy] Description: Write a function countChar(str, char)
+// that returns how many times a character appears in a string.
+// Example: Input: 'banana', 'a' → Output: 3 Hint: Use split(char).length - 1 or a loop.
+const countChar =(str, char) =>{
     let count = 0
-    for (let letter of str) {
-        if (letter === char) {
+    for(let letter of str){
+        if(letter === char){
             count++
         }
     }
     return count
 }
-// console.log(countChar2('occurrences', 'u'))
-// console.log(countChar('banana', 'n'))
+
+const countChar2 = (str, char) =>{
+    const result = str.split(char).length -1 
+    return result
+}
+console.log(countChar2('Banana', 'a'))
+// console.log(countChar('Bangladesh', 'a'))
