@@ -13,17 +13,6 @@ const reverseWords = (sentence) => {
 // console.log(reverseWords('I Love You Arpa'))
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Problem 7: Count Vowels in a String [Easy] Description: Write a function countVowels(str) that counts and returns the number of vowels (a, e, i, o, u) in a string. Example: Input: 'hello' → Output: 2 Input: 'javascript' → Output: 3 Hint: Use a loop or match() with a regular expression.
 
 const countVowels = (str) => {
@@ -71,73 +60,31 @@ const removeVowels = (str) =>{
     }
     return result
 }
-console.log(removeVowels('Bangladesh'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(removeVowels('Bangladesh'))
 
 // Problem 8: Check Palindrome  [Easy]
-// Description: Write a function isPalindrome(str) that returns true if the string reads the same forwards and backwards.
+// Description: Write a function isPalindrome(str) that returns true if the string reads the 
+// same forwards and backwards.
 // Example:
-// Input: 'racecar'  → Output: trueInput: 'hello'    → Output: false
+// Input: 'racecar'  → Output: true Input: 'hello'    → Output: false
 // Hint: Compare the string to its reverse.
-const isPalindrome = (str) => {
+const isPalindrome = (str) =>{
     const reverse = str.split('').reverse().join('')
-    if (str === reverse) {
+    if(reverse === str){
         return true
     }
-    else {
+    else{
         return false
     }
-
 }
-// console.log(isPalindrome('reverse'))
+// console.log(isPalindrome('racecar'))
+
+//Alternate problem-8: বিবরণ: এমন একটি ফাংশন লিখুন reverseSentence(sentence) — যেটি একটি বাক্যের (sentence) প্রতিটি শব্দকে উল্টিয়ে দেবে, কিন্তু বাক্যের শব্দগুলোর ক্রম বা সিরিয়াল ঠিক থাকবে।উদাহরণ:ইনপুট: 'Hello World' $\rightarrow$ আউটপুট: 'olleH dlroW'ইনপুট: 'JavaScript is fun' $\rightarrow$ আউটপুট: 'tpircSavaJ si nuf'
+const reverseSentence = (sentence) =>{
+    const reverse = sentence.split(' ').reverse().join(' ')
+    return reverse
+}
+console.log(reverseSentence('I Love Bangladesh'))
 
 // Problem 9: Capitalize First Letter of Each Word [Easy] Description: Write a function titleCase(str) that capitalizes the first letter of every word in a string. Example: Input: 'hello world' → Output: 'Hello World' Hint: Use split(' '), map(), and join(' ').
 const titleCase = (str) => {
