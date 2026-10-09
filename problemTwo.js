@@ -88,17 +88,45 @@ const reverseSentence = (sentence) =>{
 }
 // console.log(reverseSentence('I Love Bangladesh'))
 
+
+
+
+
 // Problem 9: Capitalize First Letter of Each Word [Easy] Description: Write a function titleCase(str) 
 // that capitalizes the first letter of every word in a string. 
 // Example: Input: 'hello world' → Output: 'Hello World' Hint: Use split(' '), map(), and join(' ').
-const titleCase = (str) => {
+const titleCase = (str) =>{
     const words = str.split(' ')
-    const capitalizes = words.map(word => {
+    const uperCase = words.map(word =>{
         return word[0].toUpperCase() + word.slice(1)
     })
-    return capitalizes.join(' ')
+    return uperCase.join(' ')
 }
-// console.log(titleCase('hello harun'))
+// console.log(titleCase('harun ki obosta'))
+
+// Alternate problem 9: পরিবর্তন ক্যাটাগরির শব্দ (Alternate Capitalize Problem)
+// বিবরণ:
+// এমন একটি ফাংশন লিখুন camelCaseToNormal(str) — যেটি একটি স্ট্রিংয়ের প্রতিটি শব্দের শুধু প্রথম অক্ষরটি ছোট হাতের (lowercase) করবে এবং বাকী অক্ষরগুলো অপরিবর্তিত রাখবে।
+const camelCaseToNormal = (str) =>{
+    const words = str.split(' ')
+    const lowerCase = words.map(word =>{
+        return word[0].toLowerCase() + word.slice(1)
+    })
+    return lowerCase.join(' ')
+}
+console.log(camelCaseToNormal('JavaScript Is Fun'))
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Problem 10: Count Occurrences of a Character [Easy] Description: Write a function countChar(str, char)
 // that returns how many times a character appears in a string.
@@ -117,5 +145,5 @@ const countChar2 = (str, char) =>{
     const result = str.split(char).length -1 
     return result
 }
-console.log(countChar2('Banana', 'a'))
+// console.log(countChar2('Banana', 'a'))
 // console.log(countChar('Bangladesh', 'a'))
