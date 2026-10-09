@@ -114,19 +114,7 @@ const camelCaseToNormal = (str) =>{
     })
     return lowerCase.join(' ')
 }
-console.log(camelCaseToNormal('JavaScript Is Fun'))
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(camelCaseToNormal('JavaScript Is Fun'))
 
 // Problem 10: Count Occurrences of a Character [Easy] Description: Write a function countChar(str, char)
 // that returns how many times a character appears in a string.

@@ -2,11 +2,11 @@
 const sumArray = (arr) =>{
     let count = 0
     for(let number of arr){
-        count = number + count
+        count = count + number
     }
     return count
 }
-// console.log(sumArray([1,10,3]))
+// console.log(sumArray([1, 2, 3, 4, 5]))
 
 // Problem 12: Find Maximum Value in Array  [Easy]
 // Description: Write a function findMax(arr) that returns the largest number in an array without using Math.max().
@@ -22,7 +22,37 @@ const findMax = (arr) =>{
     }
     return max
 }
-// console.log(findMax([10, 20, 30]))
+console.log(findMax([3, 1, 7, 2, 9, 100] ))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Problem 13: Remove Duplicates from Array  [Easy]
 // Description: Write a function removeDuplicates(arr) that returns a new array with duplicate values removed.
