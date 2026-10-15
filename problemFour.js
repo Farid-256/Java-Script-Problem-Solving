@@ -24,13 +24,13 @@ const fizzBuzz = (n) => {
         if (i % 3 === 0 && i % 5 === 0) {
             result.push('FizzBuzz')
         }
-        else if(i % 3===0){
+        else if (i % 3 === 0) {
             result.push('Fizz')
         }
-        else if(i%5===0){
+        else if (i % 5 === 0) {
             result.push('Buzz')
         }
-        else{
+        else {
             result.push(i)
         }
     }
@@ -39,12 +39,33 @@ const fizzBuzz = (n) => {
 // console.log(fizzBuzz(15))
 
 // Problem 19: Invert an Object [Easy] Description: Write a function invertObject(obj) that swaps the keys and values of an object. Example: Input: {a: 1, b: 2} → Output: {1: 'a', 2: 'b'} Hint: Use Object.entries() and reduce().
-const invertObject = (obj) =>{
+const invertObject = (obj) => {
     let result = {}
-    for(item in obj){
+    for (item in obj) {
         let key = obj[item]
         result[key] = item
     }
     return result
 }
 // console.log(invertObject({a: 1, b: 2} ))
+
+//  Problem 20: Find Duplicate Values in Array of Objects [Medium] Description: Given an array of objects, write a function findDuplicateNames(arr) that returns names that appear more than once. Example: Input: [{name:'Ali'},{name:'Sara'},{name:'Ali'}] Output: ['Ali'] Hint: Use a frequency map (object) to count occurrences.
+const findDuplicateNames = (arr) => {
+    let seeName = []
+    let duplicateName = []
+
+    for (let item of arr) {
+        let name = item.name
+
+        if (seeName.includes(name)) {
+            if (!duplicateName.includes(name)) {
+                duplicateName.push(name)
+            }
+        }else{
+            seeName.push(name)
+        }
+
+    }
+    return duplicateName
+}
+console.log(findDuplicateNames([{ name: 'Ali' }, { name: 'Sara' }, { name: 'Ali' }]))

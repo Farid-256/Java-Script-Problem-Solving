@@ -71,43 +71,11 @@ const largest = (a, b, c) => {
 // এমন একটা function লেখো secondLargest(a, b, c) — যেটা তিনটা সংখ্যার মধ্যে দ্বিতীয় বৃহত্তম (second largest) সংখ্যাটা return করবে।
 //Right way
 const secondLargest = (a, b, c) =>{
-    const arr = [a, b, c]
-    const result = arr.sort((x, y) => x - y)
+    let arr = [a, b, c]
+    let result = arr.sort((x, y) => x - y)
     return result[1]
-
 }
-// console.log(secondLargest(30, 20, 10))
-
-
-// const secondLargest = (a, b, c) => {
-//     let arr1 = [a, b, c]
-//     const arr2 = []
-//     if (a >= b && a >= c) {
-//         arr2.push(a)
-//     }
-//     else if (b >= a && b >= c) {
-//         arr2.push(b)
-//     }
-//     else {
-//         arr2.push(c)
-//     }
-//     if (a <= b && a <= c) {
-//         arr2.push(a)
-//     }
-//     else if (b <= a && b <= c) {
-//         arr2.push(b)
-//     }
-//     else {
-//         arr2.push(c)
-//     }
-//     const combind = [...arr1, ...arr2]
-//     const uncommon = combind.filter(item => {
-//         return !arr1.includes(item) || !arr2.includes(item)
-//     })
-//     return uncommon
-// }
-// console.log(secondLargest(30, 10, 10))
-
+// console.log(secondLargest(20, 10, 30))
 
 
 // Problem 4: Celsius to Fahrenheit  [Easy]
@@ -125,14 +93,14 @@ const toFahrenheit = (celsius) => {
 // Example:
 // Input: -5  → Output: 'negative'Input: 0   → Output: 'zero'
 // Hint: Use if-else if-else statements.
-const checkSign = (n) =>{
-    if(n === 0){
+const checkSign = (n) => {
+    if (n === 0) {
         return 'Zero'
     }
-    else if(n > 0){
+    else if (n > 0) {
         return 'Positive'
     }
-    else{
+    else {
         return 'Negative'
     }
 }
@@ -140,20 +108,20 @@ const checkSign = (n) =>{
 
 // Alternate problem 5: Description:
 // একটা function লেখো checkTemperature(temp) — যেটা তাপমাত্রা (temperature) নিয়ে একটা category return করবে।
-const checkTemperature = (temp) =>{
-    if(temp < 0){
+const checkTemperature = (temp) => {
+    if (temp < 0) {
         return 'freezing'
     }
-    else if(temp <= 10){
+    else if (temp <= 10) {
         return 'cold'
     }
-    else if(temp <=25){
+    else if (temp <= 25) {
         return 'normal'
     }
-    else if(temp <= 35){
+    else if (temp <= 35) {
         return 'hot'
     }
-    else if(temp > 35){
+    else if (temp > 35) {
         return 'very hot'
     }
 }
