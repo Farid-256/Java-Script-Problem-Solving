@@ -3,7 +3,7 @@
 // Example:
 // Input: a = 5, b = 10. Output: a = 10, b = 5
 // Hint: Try using destructuring or arithmetic operators.
-const swap = (a, b) =>{
+const swap = (a, b) => {
     return [a, b] = [b, a]
 }
 // console.log(swap(10, 5))
@@ -13,12 +13,12 @@ const swap = (a, b) =>{
 // Description:
 // দুইটা variable a এবং b এর মান এমনভাবে swap করো যাতে কোনো third variable ব্যবহার না হয়, আর array destructuringও না হয়। শুধু arithmetic 
 // operators (+, -) ব্যবহার করবে।
-const swap2 = (a, b) =>{
+const swap2 = (a, b) => {
     a = a + b //10 + 5 = 15
     b = a - b //15 - 5 = 10
     a = a - b
-    return {a, b}
-    }
+    return { a, b }
+}
 // console.log(swap2(10, 5))
 
 
@@ -27,11 +27,11 @@ const swap2 = (a, b) =>{
 // Example:
 // Input: 4  → Output: true. Input: 7  → Output: false
 // Hint: Use the modulus (%) operator.
-const isEven = (n) =>{
-    if(n % 2 === 0){
+const isEven = (n) => {
+    if (n % 2 === 0) {
         return true
     }
-    else{
+    else {
         return false
     }
 }
@@ -41,15 +41,15 @@ const isEven = (n) =>{
 // Alternate Problem 2: Check Even or Odd [Easy]
 // Description:
 // এমন একটা function লেখো যেটা একটা সংখ্যা নেবে এবং বলবে সেটা জোড় (even) নাকি বিজোড় (odd)।
-const isEven2 = (n) =>{
-    if(n % 2 === 0){
+const isEven2 = (n) => {
+    if (n % 2 === 0) {
         return 'even'
     }
-    else{
+    else {
         return 'odd'
     }
 }
-console.log(isEven2(10))
+// console.log(isEven2(10))
 
 
 // Problem 3: Find the Largest of Three Numbers  [Easy]
@@ -57,14 +57,32 @@ console.log(isEven2(10))
 // Example:
 // Input: 3, 7, 5  → Output: 7
 // Hint: Use Math.max() or if-else conditions.
-
+const largest = (a, b, c) => {
+    if(a > b & a > c){
+        return a
+    }
+    else if(b > a & b > c){
+        return b
+    }
+    else{
+        return c
+    }
+}
+// console.log(largest(10, 20, 30))
 
 
 // Alternate problem: Find the Second Largest [Easy-Medium]
 // Description:
 // এমন একটা function লেখো secondLargest(a, b, c) — যেটা তিনটা সংখ্যার মধ্যে দ্বিতীয় বৃহত্তম (second largest) সংখ্যাটা return করবে।
 //Right way
-
+const secondLargest = (a, b, c) =>{
+    let max = Math.max(a, b, c)
+    let min = Math.min(a, b, c)
+    let total = a + b + c
+    let secondLar = (total - max) - min
+    return secondLar
+}
+// console.log(secondLargest(10, 20, 30))
 
 
 // Problem 4: Celsius to Fahrenheit  [Easy]
