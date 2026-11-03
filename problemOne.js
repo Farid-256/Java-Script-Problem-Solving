@@ -27,12 +27,29 @@ const swap2 = (a, b) =>{
 // Example:
 // Input: 4  → Output: true. Input: 7  → Output: false
 // Hint: Use the modulus (%) operator.
+const isEven = (n) =>{
+    if(n % 2 === 0){
+        return true
+    }
+    else{
+        return false
+    }
+}
+// console.log(isEven(11))
 
 
 // Alternate Problem 2: Check Even or Odd [Easy]
 // Description:
 // এমন একটা function লেখো যেটা একটা সংখ্যা নেবে এবং বলবে সেটা জোড় (even) নাকি বিজোড় (odd)।
-
+const isEven2 = (n) =>{
+    if(n % 2 === 0){
+        return 'even'
+    }
+    else{
+        return 'odd'
+    }
+}
+console.log(isEven2(10))
 
 
 // Problem 3: Find the Largest of Three Numbers  [Easy]
