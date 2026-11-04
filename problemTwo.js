@@ -1,10 +1,22 @@
 // Problem 6: Reverse a String [Easy] Description: Write a function reverseString(str) that returns the reverse of a given string. Example: Input: 'hello' → Output: 'olleh'Input: 'world' → Output: 'dlrow' Hint: Use split(''), reverse(), and join('')
-
+const reverseString = (str) =>{
+    const word = str.split('')
+    const reverse = word.reverse()
+    const join = reverse.join('')
+    return join
+}
+// console.log(reverseString('Hello'))
 
 //  Problem 6 (Alternate): Reverse Words in a Sentence [Easy]
 // Description:
 // একটা function লেখো reverseWords(sentence) — যেটা একটা বাক্যের শব্দগুলোর ক্রম উল্টে দেবে
-
+const reverseWords = (sentence) =>{
+    const word = sentence.split(' ')
+    const reverse = word.reverse()
+    const join = reverse.join(' ')
+    return join
+}
+// console.log(reverseWords('I live in Bangladesh'))
 
 
 // Problem 7: Count Vowels in a String [Easy] Description: Write a function countVowels(str) that counts and returns the number of vowels (a, e, i, o, u) in a string. Example: Input: 'hello' → Output: 2 Input: 'javascript' → Output: 3 Hint: Use a loop or match() with a regular expression.
@@ -49,4 +61,3 @@
 // Problem 10: Count Occurrences of a Character [Easy] Description: Write a function countChar(str, char)
 // that returns how many times a character appears in a string.
 // Example: Input: 'banana', 'a' → Output: 3 Hint: Use split(char).length - 1 or a loop.
-

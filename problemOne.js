@@ -90,14 +90,29 @@ const secondLargest = (a, b, c) =>{
 // Example:
 // Input: 0   → Output: 32 Input: 100 → Output: 212
 // Hint: Formula: (C × 9/5) + 32
+const toFahrenheit = (celsius) =>{
+    return (celsius * 9/5) + 32
+}
+// console.log(toFahrenheit(100))
 
 
 // Problem 5: Check Positive, Negative or Zero  [Easy]
 // Description: Write a function checkSign(n) that returns 'positive', 'negative', or 'zero' based on the value of n.
 // Example:
-// Input: -5  → Output: 'negative'Input: 0   → Output: 'zero'
+// Input: -5  → Output: 'negative'Input: 0 → Output: 'zero'
 // Hint: Use if-else if-else statements.
-
+const checkSign = (n) =>{
+    if(n > 0){
+        return 'Positive'
+    }
+    else if(n < 0){
+        return 'Negative'
+    }
+    else{
+        return 'Zero'
+    }
+}
+// console.log(checkSign(10))
 
 // Alternate problem 5: Description:
 // একটা function লেখো checkTemperature(temp) — যেটা তাপমাত্রা (temperature) নিয়ে একটা category return করবে।
