@@ -108,14 +108,24 @@ const titleCase = (str) => {
         result.push(data)
     }
     return result.join(' ')
-}
-console.log(titleCase('hello world'))
+ }
+// console.log(titleCase('hello world'))
 
 // Alternate problem 9: পরিবর্তন ক্যাটাগরির শব্দ (Alternate Capitalize Problem)
 // বিবরণ:
-// এমন একটি ফাংশন লিখুন camelCaseToNormal(str) — যেটি একটি স্ট্রিংয়ের প্রতিটি শব্দের শুধু প্রথম অক্ষরটি ছোট হাতের (lowercase) করবে এবং বাকী অক্ষরগুলো অপরিবর্তিত রাখবে।
-
+// এমন একটি ফাংশন লিখুন camelCaseToNormal(str) — যেটি একটি স্ট্রিংয়ের প্রতিটি শব্দের শুধু প্রথম অক্ষরটি 
+// ছোট হাতের (lowercase) করবে এবং বাকী অক্ষরগুলো অপরিবর্তিত রাখবে।
+const camelCaseToNormal = (str) =>{
+    let strSplit = str.split(' ')
+    let result = []
+    for(let loop of strSplit){
+        let data = loop[0].toLowerCase() + loop.slice(1)
+        result.push(data)
+    }
+    return result.join(' ')
+}
+console.log(camelCaseToNormal('I Love You'))
 
 // Problem 10: Count Occurrences of a Character [Easy] Description: Write a function countChar(str, char)
 // that returns how many times a character appears in a string.
-// Example: Input: 'banana', 'a' → Output: 3 Hint: Use split(char).length - 1 or a loop.
+// Example: Input: 'banana', 'a' → Output: 3 Hint: Use split(char).length - 1 or a loop
