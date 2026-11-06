@@ -124,8 +124,31 @@ const camelCaseToNormal = (str) =>{
     }
     return result.join(' ')
 }
-console.log(camelCaseToNormal('I Love You'))
+// console.log(camelCaseToNormal('I Love You'))
 
 // Problem 10: Count Occurrences of a Character [Easy] Description: Write a function countChar(str, char)
+// that returns how many times a character appears in a string.
+// Example: Input: 'banana', 'a' → Output: 3 Hint: Use split(char).length - 1 or a loop
+const countChar = (str, char) =>{
+    let result = []
+
+    let strSplit = str.split('')
+
+    for(let loop of strSplit){
+
+        if(char.includes(loop)){
+            result.push(loop)
+        }
+    }
+    return result.length
+}
+// console.log(countChar('banana', 'a'))
+
+
+
+
+
+
+// Count Occurrences of a Character [Easy] Description: Write a function countChar(str, char)
 // that returns how many times a character appears in a string.
 // Example: Input: 'banana', 'a' → Output: 3 Hint: Use split(char).length - 1 or a loop

@@ -112,7 +112,4 @@ const checkSign = (n) =>{
         return 'Zero'
     }
 }
-// console.log(checkSign(10))
-
-// Alternate problem 5: Description:
-// একটা function লেখো checkTemperature(temp) — যেটা তাপমাত্রা (temperature) নিয়ে একটা category return করবে।
+// console.log(checkSign(10))।
