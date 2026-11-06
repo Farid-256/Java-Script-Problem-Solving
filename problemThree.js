@@ -1,28 +1,55 @@
-// Problem 11: Find the Sum of an Array [Easy] Description: Write a function sumArray(arr) that returns the sum of all numbers in an array. Example: Input: [1, 2, 3, 4, 5] → Output: 15 Hint: Use reduce() or a for loop.
+
+
+// Problem 11: Find the Sum of an Array [Easy] Description: Write a function 
+// sumArray(arr) that returns the sum of all numbers in an array. 
+// Example: Input: [1, 2, 3, 4, 5] → Output: 15 Hint: Use reduce() or a for loop.
+// const sumArray = (arr) =>{
+//     return arr.reduce((accumulator, currentValue) =>{
+//         return accumulator + currentValue 
+//     }, 0)
+// }
+// console.log(sumArray([1, 2, 3, 4, 5]))
+
 const sumArray = (arr) => {
-    let count = 0
-    for (let number of arr) {
-        count = count + number
+    let sum = 0
+    for (let itr of arr) {
+        sum = itr + sum
     }
-    return count
+    return sum
 }
 // console.log(sumArray([1, 2, 3, 4, 5]))
 
 // Problem 12: Find Maximum Value in Array  [Easy]
-// Description: Write a function findMax(arr) that returns the largest number in an array without using Math.max().
+// Description: Write a function findMax(arr) that returns the largest number in an array without
+// using Math.max().
 // Example:
 // Input: [3, 1, 7, 2, 9]  → Output: 9
 // Hint: Loop through and track the largest value found.
 const findMax = (arr) => {
     let max = arr[0]
-    for (let number of arr) {
-        if (number > max) {
-            max = number
-        }
+    for (let itr of arr) {
+      if(max < itr){
+        max = itr
+      }
     }
     return max
 }
-// console.log(findMax([3, 1, 7, 2, 9, 100] ))
+// console.log(findMax([3, 1, 7, 2, 9, 100]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Problem: FizzBuzz [Classic Easy]
 // Description:
@@ -79,7 +106,7 @@ const flattenArray = (arr) => {
 const chunkArray = (arr, size) => {
     let result = []
     for (let i = 0; i < arr.length; i = i + size) {
-        let newArr = arr.slice(i, i+ size)
+        let newArr = arr.slice(i, i + size)
         result.push(newArr)
     }
     return result
