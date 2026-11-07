@@ -36,45 +36,47 @@ const findMax = (arr) => {
 }
 // console.log(findMax([3, 1, 7, 2, 9, 100]))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Problem: FizzBuzz [Classic Easy]
 // Description:
 // একটা function লেখো fizzBuzz(n) — যেটা ১ থেকে n পর্যন্ত সংখ্যাগুলোর একটা array return করবে, কিন্তু:
-// ৩ দিয়ে বিভাজ্য হলে → 'Fizz' ৫ দিয়ে বিভাজ্য হলে → 'Buzz' ৩ আর ৫ দুইটা দিয়েই বিভাজ্য হলে → 'FizzBuzz' নাহলে → সংখ্যাটা
+// ৩ দিয়ে বিভাজ্য হলে → 'Fizz' ৫ দিয়ে বিভাজ্য হলে → 'Buzz' ৩ আর ৫ দুইটা দিয়েই বিভাজ্য হলে → 'FizzBuzz'
+// নাহলে → সংখ্যাটা
 const fizzBuzz = (n) => {
     let result = []
-    for (let i = 1; i <= n; i++) {
+    for(let i = 1; i <= n; i++){
+       if(i % 3 === 0 && i % 5 === 0){
+        result.push('FizzBuzz')
+       }
 
-        if (i % 3 === 0 && i % 5 === 0) {
-            result.push('FizzBuzz')
-        }
-        else if (i % 3 === 0) {
-            result.push('Fizz')
-        }
-        else if (i % 5 === 0) {
-            result.push('Buzz')
-        }
-        else {
-            result.push(i)
-        }
+       else if(i % 3 === 0){
+        result.push('Fizz')
+       }
+       else if(i % 5 === 0){
+        result.push('Buzz')
+       }
+       else{
+        result.push(i)
+       }
     }
     return result
 }
 // console.log(fizzBuzz(15))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Problem 13: Remove Duplicates from Array  [Easy]
 // Description: Write a function removeDuplicates(arr) that returns a new array with duplicate values removed.
