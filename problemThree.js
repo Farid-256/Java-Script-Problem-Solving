@@ -28,9 +28,9 @@ const sumArray = (arr) => {
 const findMax = (arr) => {
     let max = arr[0]
     for (let itr of arr) {
-      if(max < itr){
-        max = itr
-      }
+        if (max < itr) {
+            max = itr
+        }
     }
     return max
 }
@@ -43,20 +43,20 @@ const findMax = (arr) => {
 // নাহলে → সংখ্যাটা
 const fizzBuzz = (n) => {
     let result = []
-    for(let i = 1; i <= n; i++){
-       if(i % 3 === 0 && i % 5 === 0){
-        result.push('FizzBuzz')
-       }
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            result.push('FizzBuzz')
+        }
 
-       else if(i % 3 === 0){
-        result.push('Fizz')
-       }
-       else if(i % 5 === 0){
-        result.push('Buzz')
-       }
-       else{
-        result.push(i)
-       }
+        else if (i % 3 === 0) {
+            result.push('Fizz')
+        }
+        else if (i % 5 === 0) {
+            result.push('Buzz')
+        }
+        else {
+            result.push(i)
+        }
     }
     return result
 }
@@ -69,8 +69,8 @@ const fizzBuzz = (n) => {
 // Hint: Use Set or filter() with indexOf()
 const removeDuplicates = (arr) => {
     let result = []
-    for(let loop of arr){
-        if(!result.includes(loop)){
+    for (let loop of arr) {
+        if (!result.includes(loop)) {
             result.push(loop)
         }
     }
@@ -79,7 +79,7 @@ const removeDuplicates = (arr) => {
 // console.log(removeDuplicates([1, 2, 2, 3, 3, 4, 5, 5, 5]))
 
 //alternate way
-const removeDuplicates2 = (arr) =>{
+const removeDuplicates2 = (arr) => {
     return [...new Set(arr)]
 }
 // console.log(removeDuplicates2([1, 2, 2, 3, 3, 4, 5, 5, 5, 6]))
@@ -89,18 +89,20 @@ const removeDuplicates2 = (arr) =>{
 // Example:
 // Input: [1, [2, 3], [4, 5]]  → Output: [1, 2, 3, 4, 5]
 // Hint: Use flat() or reduce() with concat().
-const flattenArray = (arr) =>{
+const flattenArray = (arr) => {
     return arr.flat()
 }
 // console.log(flattenArray([1, [2, 3], [4, 5]]))
 
-// Problem 15: Chunk an Array [Medium] Description: Write a function chunkArray(arr, size) that splits an array into chunks of a given size. Example: Input: [1,2,3,4,5], 2 → Output: [[1,2],[3,4],[5]]
-const chunkArray = (arr, size) => {
+// Problem 15: Chunk an Array [Medium] Description: Write a function chunkArray(arr, size) 
+// that splits an array into chunks of a given size. 
+// Example: Input: [1,2,3,4,5], 2 → Output: [[1,2],[3,4],[5]]
+let chunkArray = (arr, size) => {
     let result = []
     for (let i = 0; i < arr.length; i = i + size) {
-        let newArr = arr.slice(i, i + size)
-        result.push(newArr)
+        let chunks = arr.slice(i, i + size)
+        result.push(chunks)
     }
     return result
 }
-// console.log(chunkArray([1, 2, 3, 4, 5], 2))
+console.log(chunkArray([1, 2, 3, 4, 5, 6], 3))
