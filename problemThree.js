@@ -62,37 +62,50 @@ const fizzBuzz = (n) => {
 }
 // console.log(fizzBuzz(15))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Problem 13: Remove Duplicates from Array  [Easy]
 // Description: Write a function removeDuplicates(arr) that returns a new array with duplicate values removed.
 // Example:
-// Input: [1, 2, 2, 3, 3, 4]  → Output: [1, 2, 3, 4]
+// Input: [1, 2, 2, 3, 3, 4] → Output: [1, 2, 3, 4]
 // Hint: Use Set or filter() with indexOf()
 const removeDuplicates = (arr) => {
-    let newArr = []
-    for (let number of arr) {
-        if (!newArr.includes(number)) {
-            newArr.push(number)
+    let result = []
+    for(let loop of arr){
+        if(!result.includes(loop)){
+            result.push(loop)
         }
     }
-    return newArr
+    return result
 }
-// console.log(removeDuplicates([1, 2, 2, 3, 3, 4]))
+// console.log(removeDuplicates([1, 2, 2, 3, 3, 4, 5, 5, 5]))
+
+//alternate way
+const removeDuplicates2 = (arr) =>{
+    return [...new Set(arr)]
+}
+// console.log(removeDuplicates2([1, 2, 2, 3, 3, 4, 5, 5, 5, 6]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Problem 14: Flatten a Nested Array  [Medium]
 // Description: Write a function flattenArray(arr) that flattens one level of a nested array.
