@@ -1,12 +1,12 @@
+
 // Problem 16: Count Object Properties [Easy] Description: Write a function countProperties(obj) that returns the number of properties in an object. Example: Input: {a: 1, b: 2, c: 3} → Output: 3 Hint: Use Object.keys().length.
-const countProperties = (obj) => {
-    return Object.keys(obj).length
-    //alternate way
-    let count = 0
-    for (let pro in obj) {
-        count++
+const countProperties = (obj) =>{
+    let result = []
+    for(let key in obj){
+        result.push(key)
     }
-    return count
+    let val = Object.values(obj)
+    return [result.length, val]
 }
 // console.log(countProperties({a: 1, b: 2, c: 3}))
 
@@ -68,4 +68,4 @@ const findDuplicateNames = (arr) => {
     }
     return duplicateName
 }
-console.log(findDuplicateNames([{ name: 'Ali' }, { name: 'Sara' }, { name: 'Ali' }]))
+// console.log(findDuplicateNames([{ name: 'Ali' }, { name: 'Sara' }, { name: 'Ali' }]))

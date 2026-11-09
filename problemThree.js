@@ -99,10 +99,10 @@ const flattenArray = (arr) => {
 // Example: Input: [1,2,3,4,5], 2 → Output: [[1,2],[3,4],[5]]
 let chunkArray = (arr, size) => {
     let result = []
-    for (let i = 0; i < arr.length; i = i + size) {
-        let chunks = arr.slice(i, i + size)
-        result.push(chunks)
+    for (let i = 0; i < arr.length; i = i + 1) {
+        let newArr = arr.slice(i, i + size)
+        result.push(newArr)
     }
     return result
 }
-console.log(chunkArray([1, 2, 3, 4, 5, 6], 3))
+console.log('Result:', chunkArray([1,2,3,4,5], 2))
