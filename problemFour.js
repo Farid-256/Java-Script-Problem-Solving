@@ -15,42 +15,76 @@ const mergeObjects = (obj1, obj2) =>{
     let merge = {...obj1, ...obj2}
     return merge
 }
-console.log(mergeObjects({a:1}, {b:2}))
+// console.log(mergeObjects({a:1}, {b:2}))
 
 // Problem 18: FizzBuzz [Easy] Description: Write a function fizzBuzz(n) that prints numbers from 1 to n. For multiples of 3 print 'Fizz', multiples of 5 print 'Buzz', multiples of both print 'FizzBuzz'. Example: Input: 15 Output: 1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz Hint: Check divisibility with the % operator in the right order.
-const fizzBuzz = (n) => {
+const fizzBuzz = (n) =>{
     let result = []
-
-    for (let i = 1; i <= n; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
+    for(let i = 1; i <= n; i++){
+        if(i % 3 === 0 && i % 5 === 0){
             result.push('FizzBuzz')
         }
-        else if (i % 3 === 0) {
+        else if(i % 3 === 0){
             result.push('Fizz')
         }
-        else if (i % 5 === 0) {
+        else if(i % 5 === 0){
             result.push('Buzz')
         }
-        else {
+        else{
             result.push(i)
         }
     }
-    return result.join()
+    return result
 }
 // console.log(fizzBuzz(15))
 
-// Problem 19: Invert an Object [Easy] Description: Write a function invertObject(obj) that swaps the keys and values of an object. Example: Input: {a: 1, b: 2} → Output: {1: 'a', 2: 'b'} Hint: Use Object.entries() and reduce().
+// Problem 19: Invert an Object [Easy] Description: Write a function invertObject(obj) that swaps the 
+// keys and values of an object. Example: Input: {a: 1, b: 2} → Output: {1: 'a', 2: 'b'} 
+// Hint: Use Object.entries() and reduce().
 const invertObject = (obj) => {
-    let result = {}
-    for (item in obj) {
-        let key = obj[item]
-        result[key] = item
-    }
-    return result
-}
-// console.log(invertObject({a: 1, b: 2} ))
+    let key = Object.keys(obj)
+    let value = Object.values(obj)
 
-//  Problem 20: Find Duplicate Values in Array of Objects [Medium] Description: Given an array of objects, write a function findDuplicateNames(arr) that returns names that appear more than once. Example: Input: [{name:'Ali'},{name:'Sara'},{name:'Ali'}] Output: ['Ali'] Hint: Use a frequency map (object) to count occurrences.
+    let invertObj = {}
+    for(let i = 0; i < key.length; i++){
+        let newKey = value[i]
+        let newValue = key[i]
+
+        invertObj[newKey] = newValue
+    }
+    return invertObj
+    
+}
+// console.log(invertObject({a: 1, b: 2}))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  Problem 20: Find Duplicate Values in Array of Objects [Medium] 
+// Description: Given an array of objects, write a function findDuplicateNames(arr) 
+// that returns names that appear more than once. Example: Input: [{name:'Ali'},{name:'Sara'},{name:'Ali'}] Output: ['Ali'] Hint: Use a frequency map (object) to count occurrences.
 const findDuplicateNames = (arr) => {
     let seeName = []
     let duplicateName = []
