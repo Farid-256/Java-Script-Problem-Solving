@@ -38,7 +38,7 @@ const fizzBuzz = (n) =>{
 }
 // console.log(fizzBuzz(15))
 
-// Problem 19: Invert an Object [Easy] Description: Write a function invertObject(obj) that swaps the 
+// ***Problem 19: Invert an Object [Easy] Description: Write a function invertObject(obj) that swaps the 
 // keys and values of an object. Example: Input: {a: 1, b: 2} → Output: {1: 'a', 2: 'b'} 
 // Hint: Use Object.entries() and reduce().
 const invertObject = (obj) => {
@@ -57,50 +57,47 @@ const invertObject = (obj) => {
 }
 // console.log(invertObject({a: 1, b: 2}))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //  Problem 20: Find Duplicate Values in Array of Objects [Medium] 
 // Description: Given an array of objects, write a function findDuplicateNames(arr) 
 // that returns names that appear more than once. Example: Input: [{name:'Ali'},{name:'Sara'},{name:'Ali'}] Output: ['Ali'] Hint: Use a frequency map (object) to count occurrences.
-const findDuplicateNames = (arr) => {
+const findDuplicateNames = (arr) =>{
     let seeName = []
     let duplicateName = []
 
-    for (let item of arr) {
-        let name = item.name
+    for(let loop of arr){
+        let name = loop.name
 
-        if (seeName.includes(name)) {
-            if (!duplicateName.includes(name)) {
+        if(seeName.includes(name)){
+            if(!duplicateName.includes(name)){
                 duplicateName.push(name)
             }
-        }else{
+        }
+        else{
             seeName.push(name)
         }
-
     }
+    
     return duplicateName
 }
-// console.log(findDuplicateNames([{ name: 'Ali' }, { name: 'Sara' }, { name: 'Ali' }]))
+// console.log(findDuplicateNames([{name:'Ali'},{name:'Sara'},{name:'Ali'}]))
+
+const findDuplicateCities = (arr) =>{
+    let seeCity = []
+    let duplicateCity = []
+
+    for(let loop of arr){
+        let cityName = loop.city
+
+        if(seeCity.includes(cityName)){
+            if(!duplicateCity.includes(cityName)){
+                duplicateCity.push(cityName)
+            }
+        }
+        else{
+            seeCity.push(cityName)
+        }
+    }
+
+    return duplicateCity
+}
+console.log(findDuplicateCities([{ city: 'Dhaka' }, { city: 'Bogura' }, { city: 'Dhaka' }, { city: 'Sylhet' }, { city: 'Dhaka' }]))
