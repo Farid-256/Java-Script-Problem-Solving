@@ -100,4 +100,4 @@ const findDuplicateCities = (arr) =>{
 
     return duplicateCity
 }
-console.log(findDuplicateCities([{ city: 'Dhaka' }, { city: 'Bogura' }, { city: 'Dhaka' }, { city: 'Sylhet' }, { city: 'Dhaka' }]))
+// console.log(findDuplicateCities([{ city: 'Dhaka' }, { city: 'Bogura' }, { city: 'Dhaka' }, { city: 'Sylhet' }, { city: 'Dhaka' }]))
