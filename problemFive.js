@@ -33,3 +33,23 @@ const fibonacci = (n) =>{
     return prev2
 }
 // console.log(fibonacci(6))
+
+// Problem 23: Create a Counter with Closure [Medium] Description: Write a function makeCounter() that returns an object with increment, decrement, and getCount methods using closure. Example: const c = makeCounter();c.increment(); c.increment();c.getCount(); // 2 Hint: Use a variable inside the outer function that inner functions can access.
+const makeCounter = () =>{
+    let count = 0
+
+    return function (action){
+        if(action === 'inc'){
+            count = count + 1
+        }
+        else if(action === 'dec'){
+            count = count - 1
+        }
+        else if(action === 'get'){
+            count = count
+        }
+        return count
+    }
+}
+const counter = makeCounter();
+// console.log(counter('get'));
