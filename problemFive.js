@@ -54,7 +54,7 @@ const makeCounter = () => {
 const counter = makeCounter();
 // console.log(counter('get'));
 
-//*** Problem 24: Curry a Function [Medium] Description: Write a function curry(fn) that converts a function of two arguments into a curried version. Example: const add = curry((a,b) => a+b);add(2)(3); // 5 Hint: Return a function from inside a function.
+//***Problem 24: Curry a Function [Medium] Description: Write a function curry(fn) that converts a function of two arguments into a curried version. Example: const add = curry((a,b) => a+b);add(2)(3); // 5 Hint: Return a function from inside a function.
 const curry = (fn) => {
     return function (a) {
         return function (b) {
@@ -65,7 +65,7 @@ const curry = (fn) => {
 const add = curry((a, b) => a + b)
 // console.log(add(5) (10))
 
-// Problem 25: Memoize a Function [Medium] Description: Write a function memoize(fn) that caches the results of a function so repeated calls with the same input return the cached result. Example: const memoAdd = memoize(n => n + 10);memoAdd(5); // 15 (computed)memoAdd(5); // 15 (from cache)
+// ***Problem 25: Memoize a Function [Medium] Description: Write a function memoize(fn) that caches the results of a function so repeated calls with the same input return the cached result. Example: const memoAdd = memoize(n => n + 10);memoAdd(5); // 15 (computed)memoAdd(5); // 15 (from cache)
 const menoize = (fn) => {
     let cache = {}
     return function (n) {
@@ -80,3 +80,15 @@ const menoize = (fn) => {
 }
 let memoAdd = menoize((n) => n + 10)
 // console.log(memoAdd(5))
+
+// Problem 26: Destructure and Rename [Easy] Description: Given a user object, use destructuring to extract firstName, lastName, and age, renaming firstName to name. Example: const user = {firstName:'Sara', lastName:'Khan', age:25};// Extract: name='Sara', lastName='Khan', age=25 Hint: Use: const { firstName: name, lastName, age } = user;
+
+const user = {
+    firstName : 'sara',
+    lastName : 'khan',
+    age: 25
+}
+
+let {firstName, lastName, age} = user
+
+// console.log(user.firstName)
