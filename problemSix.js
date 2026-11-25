@@ -14,4 +14,36 @@ const mergeArrays = (...arrays) =>{
     let result = arrays.flat()
     return result
 }
-console.log(mergeArrays([1,2], [3,4], [5]))
+// console.log(mergeArrays([1,2], [3,4], [5]))
+
+//*** Problem 28: Promise Chain [Medium] Description: Write a function delay(ms) that returns a Promise that resolves after ms milliseconds. Then chain two delays: first 1 second, then 2 seconds, logging a message after each. Example: delay(1000).then(() => { console.log('1 sec'); return delay(2000); }).then(() => console.log('3 sec total')); Hint: Use new Promise with setTimeout inside.
+const delay = (ms) =>{
+    return new Promise((resolved) =>{
+        setTimeout(resolved, ms)
+    })
+}
+
+const runDelay = async() =>{
+    await delay(1000)
+    console.log('Delay 1 sec')
+
+    await delay(2000)
+    console.log('Total 3 sec')
+}
+// runDelay()
+
+// * Problem 29: Async/Await Fetch Simulation [Medium] Description: Write an async function getUserData(id) that simulates fetching user data by awaiting a Promise that resolves after 500ms with a mock user object. Example: await getUserData(1);// returns {id:1, name:'Test User'} Hint: Use async/await with a Promise that wraps setTimeout.
+const getUserData = async(id) =>{
+   const user = await new Promise((resolved) =>{
+    setTimeout(() =>{
+        resolved({id: id, name: 'shakil'})
+    }, 5000)
+   })
+   return user
+}
+
+const run = async() =>{
+    const data = await getUserData(5)
+    console.log(data)
+}
+run()
